@@ -60,7 +60,7 @@ my $py = Inline::Python.new();
         ok 1, 'survived Python missing method';
         when X::AdHoc {
             ok $_.isa('X::AdHoc'), 'got an exception for calling missing method';
-            is $_.Str(), "Foo instance has no attribute 'non_existing'", 'exception message found for calling missing method';
+            is $_.Str(), "instance has no attribute 'non_existing'", 'exception message found for calling missing method';
         }
     }
 }
