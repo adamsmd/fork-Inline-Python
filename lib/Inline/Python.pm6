@@ -201,7 +201,6 @@ method py_array_to_array(Pointer $py_array) {
     for 0..^$len {
         my $item = py_sequence_get_item($py_array, $_);
         @array[$_] = self.py_to_p6($item);
-        py_dec_ref($item);
     }
     return @array;
 }
