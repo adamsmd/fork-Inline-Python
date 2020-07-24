@@ -7,6 +7,14 @@ has &!call_method;
 
 use NativeCall;
 
+sub Py_IsInitialized()
+    is native( 'python3.8' )
+    returns int { ... }
+
+BEGIN {
+    Py_IsInitialized();
+}
+
 my constant $pyhelper = %?RESOURCES<libraries/pyhelper>;
 
 class PythonObject { ... }
