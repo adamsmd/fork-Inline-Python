@@ -184,7 +184,6 @@ PyObject *py_none(void) {
 }
 
 void py_dec_ref(PyObject *obj) {
-    Py_DECREF(obj);
 }
 
 void py_inc_ref(PyObject *obj) {
