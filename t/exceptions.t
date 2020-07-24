@@ -77,8 +77,8 @@ $py.run(q:heredoc/PYTHON/);
     def test_foo(foo):
         try:
             foo.depart()
-        except Exception, e:
-            return e.message
+        except Exception as e:
+            return str(e)
     PYTHON
 
 is $py.call('__main__', 'test_foo', Foo.new), 'foo';
